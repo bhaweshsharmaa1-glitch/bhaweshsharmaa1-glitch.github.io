@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavesh Sharma — Indie Developer</title>
+<meta name="description" content="Bhavesh Sharma is a solo indie developer building games and software end to end — design, code, and release.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bhavesh Sharma",
+  "alternateName": "dev-001",
+  "jobTitle": "Indie Game & Software Developer",
+  "email": "mailto:bhaweshsharmaa1@gmail.com",
+  "sameAs": [
+    "https://dev-oo1.itch.io/polybluetooth",
+    "https://github.com/bhaweshsharmaa1-glitch",
+    "https://www.linkedin.com/in/bhavesh-sharma-cse",
+    "https://apps.microsoft.com/detail/9PCSST1T4M72"
+  ]
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --ink: #14151a;
+    --surface: #1b1d25;
+    --line: #2a2c37;
+    --text: #edebe6;
+    --muted: #9a9caa;
+    --live: #e4a63b;
+    --wip: #8b7fd1;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .mono{
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---- header ---- */
+  header{
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+  }
+  .brand span{ color: var(--muted); font-weight: 400; }
+  nav{ display: flex; gap: 22px; }
+  nav a{
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  nav a:hover{ color: var(--text); }
+
+  /* ---- hero ---- */
+  .hero{
+    padding: 96px 0 80px;
+  }
+  .hero h1{
+    font-size: 44px;
+    max-width: 11ch;
+    margin-bottom: 22px;
+  }
+  .hero p{
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 46ch;
+    margin-bottom: 36px;
+  }
+
+  .status{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+  }
+  .status:hover{ border-color: var(--live); }
+  .dot{
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--live);
+    flex-shrink: 0;
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%, 100%{ opacity: 1; }
+    50%{ opacity: 0.35; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .dot{ animation: none; }
+  }
+
+  /* ---- section shell ---- */
+  section{
+    padding: 64px 0;
+    border-top: 1px solid var(--line);
+  }
+  section > .wrap > h2{
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+
+  .about p{
+    font-size: 16px;
+    max-width: 58ch;
+    color: var(--text);
+  }
+  .about p + p{ margin-top: 16px; }
+
+  /* ---- build log / projects ---- */
+  .entry{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .entry:last-child{ border-bottom: none; }
+
+  .entry .tag{
+    font-size: 12px;
+    padding-top: 3px;
+  }
+  .entry .tag .state{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .entry.live .state{ color: var(--live); }
+  .entry.wip .state{ color: var(--wip); }
+  .entry .tag .stack{ color: var(--muted); }
+
+  .entry h3{
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  .entry p{
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 52ch;
+    margin: 0 0 14px;
+  }
+  .entry .links{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .entry .links a{
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--line);
+  }
+  .entry.live .links a{ text-decoration-color: var(--live); }
+  .entry.wip .links a{ text-decoration-color: var(--wip); }
+
+  @media (max-width: 560px){
+    .entry{ grid-template-columns: 1fr; gap: 8px; }
+    .hero h1{ font-size: 34px; max-width: none; }
+  }
+
+  /* ---- contact ---- */
+  .contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .contact-list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .contact-list a:last-child{ border-bottom: none; }
+  .contact-list a .label{ color: var(--text); }
+  .contact-list a .value{ color: var(--muted); font-size: 13px; }
+  .contact-list a:hover .label{ color: var(--live); }
+
+  footer{
+    padding: 32px 0 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Bhavesh Sharma <span>/ dev-001</span></div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>I build things and ship them myself.</h1>
+    <p>Games and software, designed, coded, and released solo — currently a first-year CS student working mostly at night.</p>
+    <a class="status" href="#work">
+      <span class="dot"></span>
+      <span class="mono">Poly Bluetooth is live on the Microsoft Store</span>
+    </a>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Build log</h2>
+
+    <div class="entry live">
+      <div class="tag mono">
+        <span class="state">SHIPPED</span>
+        <span class="stack">C#<br>WinForms</span>
+      </div>
+      <div>
+        <h3>Poly Bluetooth</h3>
+        <p>A free app that syncs music across multiple Bluetooth speakers, plus a live dual-mic announcement feature for events and small venues. No cost, no ads — built so anyone can set it up, including someone with zero technical background.</p>
+        <div class="links">
+          <a href="https://apps.microsoft.com/detail/9PCSST1T4M72?hl=en-us&gl=US" target="_blank" rel="noopener">Microsoft Store</a>
+          <a href="https://dev-oo1.itch.io/polybluetooth" target="_blank" rel="noopener">itch.io</a>
+          <a href="https://bhaweshsharmaa1-glitch.github.io/polybluetooth-site/" target="_blank" rel="noopener">Project site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry wip">
+      <div class="tag mono">
+        <span class="state">IN DEV</span>
+        <span class="stack">Unity<br>C#</span>
+      </div>
+      <div>
+        <h3>Aether Gacha</h3>
+        <p>A gacha RPG inspired by the manhwa "Pick Me Up: Infinite Gacha" — hand-built terrain, hero ultimates, and a full backend economy, alongside an original prequel novel set in the same world.</p>
+      </div>
+    </div>
+
+    <div class="entry wip">
+      <div class="tag mono">
+        <span class="state">IN DEV</span>
+        <span class="stack">Godot</span>
+      </div>
+      <div>
+        <h3>Reincarnated in a Dating Sim (as a Normal Person)</h3>
+        <p>An isekai RPG with dating-sim elements. Protagonist Yuuki wakes up in the world of Allinore and has to protect it — training, clearing dungeons, and building relationships along the way.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="about">
+      <p>I'm a first-year Computer Science student and a self-taught, solo developer — I didn't learn any of this from a course, just from building things until they worked.</p>
+      <p>I handle everything on my projects myself: design, code, art direction, and release. Poly Bluetooth went from an idea to a published Microsoft Store app in about three weeks, including two rejected submissions I had to fix and resubmit. I work mostly at night.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact-list">
+      <a href="mailto:bhaweshsharmaa1@gmail.com">
+        <span class="label">Email</span>
+        <span class="value mono">bhaweshsharmaa1@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/bhavesh-sharma-cse" target="_blank" rel="noopener">
+        <span class="label">LinkedIn</span>
+        <span class="value mono">bhavesh-sharma-cse</span>
+      </a>
+      <a href="https://github.com/bhaweshsharmaa1-glitch" target="_blank" rel="noopener">
+        <span class="label">GitHub</span>
+        <span class="value mono">bhaweshsharmaa1-glitch</span>
+      </a>
+      <a href="https://dev-oo1.itch.io/polybluetooth" target="_blank" rel="noopener">
+        <span class="label">itch.io</span>
+        <span class="value mono">dev-oo1</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Built and maintained by Bhavesh Sharma.
+  </div>
+</footer>
+
+</body>
+</html>
